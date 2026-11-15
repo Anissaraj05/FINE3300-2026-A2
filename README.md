@@ -47,13 +47,15 @@ The following example calculates the inflation-adjusted value of $100 between Ja
 
 ![Canadian CPI and Annual Inflation](CPI_Graph.png)
 
-The graph illustrates changes in the Canadian Consumer Price Index and annual inflation from 1914 to 2026.
+The graph shows Canadian CPI and annual inflation from 1914 to 2026.
 
-The CPI generally increases over time, indicating that the overall price level has risen substantially. The increase becomes particularly noticeable during the 1970s and continues through recent decades.
+The blue line represents CPI, which generally increases over time, showing that the overall price level in Canada has risen.
 
-Annual inflation fluctuates more significantly, with periods of high inflation and occasional deflation. The graph shows that although inflation rates change from year to year, the overall CPI has generally followed an upward trend.
+The red line represents annual inflation, which fluctuates considerably. Inflation increased significantly during the 1970s and early 1980s, with another noticeable increase around 2022.
 
-The dotted horizontal line represents the CPI base level of 100.
+The graph uses a second vertical axis for annual inflation percentages. The dotted horizontal line represents the CPI base level of 100.
+
+Overall, the graph shows that even when inflation slows, the CPI can continue rising.
 
 ## Input Validation
 
@@ -67,8 +69,3 @@ Bank of Canada — Inflation Calculator and Canadian Consumer Price Index data.
 
 https://www.bankofcanada.ca/rates/related/inflation-calculator/
 
-*Verified output from the inflation calculator will be added after testing.*
-
-## Data Source
-
-[Bank of Canada Inflation Calculator](https://www.bankofcanada.ca/rates/related/inflation-calculator/)
