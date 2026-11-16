@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 
-# Read CPI data, skipping the first 8 lines to find data
+# PANDAS: Read and organize Canadian CPI data
 df = pd.read_csv("CPI.csv", skiprows=8)
 
 # Display the first five rows
@@ -17,7 +17,7 @@ print(df.columns)
 # Rename the CPI column
 df["CPI"] = df["STATIC_INFLATIONCALC"]
 
-# Calculate annual inflation
+# NUMPY: Store the calculated annual inflation rates in a NumPy array
 df["Annual Inflation"] = np.array((df["CPI"] / df["CPI"].shift(12) - 1) * 100)
 
 # Display the first 15 rows
@@ -25,7 +25,7 @@ print(df.head(15))
 
 import matplotlib.pyplot as plt
 
-# Create a graph of Canadian CPI
+# MATPLOTLIB: Create a graph of Canadian CPI and annual inflation
 fig, ax = plt.subplots()
 
 # Plot CPI over time
@@ -52,7 +52,7 @@ ax2.set_ylabel("Annual Inflation (%)")
 ax.legend(loc="upper left")
 ax2.legend(loc="upper right")
 
-# Save and display the graph
+# MATPLOTLIB: Save the completed graph as a PNG file
 plt.savefig("CPI_Graph.png")
 
 # Canadian Inflation Calculator
@@ -84,7 +84,7 @@ else:
     start_date = str(start_year) + "-" + "{:02d}".format(start_month) + "-01"
     end_date = str(end_year) + "-" + "{:02d}".format(end_month) + "-01"
 
-    # Find CPI data
+    # PANDAS: Filter the DataFrame to find CPI values for selected dates
     start_data = df[df["date"] == start_date]
     end_data = df[df["date"] == end_date]
 
@@ -105,13 +105,13 @@ else:
         annual_rate = ((end_cpi / start_cpi) ** (1 / years) - 1) * 100
 
         # Results
-        print("Original price: ${:.2f}".format(amount))
+        print("Original price: CAD ${:.2f}".format(amount))
         print("Starting CPI:", start_cpi)
         print("Ending CPI:", end_cpi)
-        print("Adjusted price: ${:.2f}".format(adjusted_price))
+        print("Adjusted price: CAD ${:.2f}".format(adjusted_price))
         print("Percentage change: {:.2f}%".format(percentage_change))
         print("Number of years: {:.2f}".format(years))
         print("Annual inflation rate: {:.2f}%".format(annual_rate))
 
-
+# MATPLOTLIB: Display the graph
 plt.show()
