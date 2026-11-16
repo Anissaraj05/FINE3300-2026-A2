@@ -19,7 +19,7 @@ The calculator determines the adjusted price, percentage change, elapsed years, 
 
 1. Download the Python file and CPI dataset into the same folder.
 2. Open the folder in VS Code.
-3. Make sure Python, Pandas, and Matplotlib are installed.
+3. Make sure Python, Pandas, NumPy, and Matplotlib are installed.
 4. Open the terminal and run:
 
    `python3 InflationCalculator.py`
@@ -33,12 +33,12 @@ The following example calculates the inflation-adjusted value of $100 between Ja
 
 | Calculation | Result |
 |---|---|
-| Original Price | $100.00 |
+| Original Price |CAD $100.00 |
 | Starting Date | January 2020 |
 | Ending Date | January 2025 |
 | Starting CPI | 136.8 |
 | Ending CPI | 161.3 |
-| Adjusted Price | $117.91 |
+| Adjusted Price | CAD $117.91 |
 | Percentage Change | 17.91% |
 | Number of Years | 5.00 |
 | Annual Inflation Rate | 3.35% |
