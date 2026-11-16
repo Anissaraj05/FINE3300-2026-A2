@@ -1,5 +1,6 @@
 
 import pandas as pd
+import numpy as np
 
 # Read CPI data, skipping the first 8 lines to find data
 df = pd.read_csv("CPI.csv", skiprows=8)
@@ -17,7 +18,7 @@ print(df.columns)
 df["CPI"] = df["STATIC_INFLATIONCALC"]
 
 # Calculate annual inflation
-df["Annual Inflation"] = (df["CPI"] / df["CPI"].shift(12) - 1) * 100
+df["Annual Inflation"] = np.array((df["CPI"] / df["CPI"].shift(12) - 1) * 100)
 
 # Display the first 15 rows
 print(df.head(15))
